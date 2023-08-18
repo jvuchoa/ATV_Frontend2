@@ -16,7 +16,7 @@ for _ in range(15):
         quant_mulheres+=1
 maior_altura=max(alturas)
 menor_altura=min(alturas)
-media_altura_H=soma_Altura_H/(5-quant_mulheres)
+media_altura_H=soma_Altura_H/(15-quant_mulheres)
 print('Maior altura:' ,maior_altura)
 print('Menor altura:' ,menor_altura)
 print('Média altura dos homens:' ,media_altura_H)
