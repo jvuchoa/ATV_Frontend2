@@ -1,25 +1,23 @@
-maior_altura = float('-inf')
-menor_altura = float('inf')
-soma_altura_homens = 0
-quantidade_mulheres = 0
-
-for _ in range(5):
- altura = float(input("Digite a altura: "))
- genero = input("Digite o gênero (M ou F): ")
- media_altura_homens = soma_altura_homens / (15 - quantidade_mulheres)
- if altura > maior_altura:
-    maior_altura = altura
- if altura < menor_altura:
-    menor_altura = altura
-
- if genero == 'M':
-    soma_altura_homens += altura
- elif genero == 'F':
-    quantidade_mulheres+= 1
-soma_altura_homens = soma_altura_homens + 1
+#QUESTÃO: DESENVOLVA UM PROGRAMA QUE SOLICITE A ALTURAE GENERO DE 15 PESSOAS E INFORME OS SEGUINTES DADOS:-MAIOR E MENOR ALTURA - MEDIA DA ALTURA DOS HOMENS - QUANT MULHERES.
+#RESOLUÇÃO ABAIXO:
 
 
-print("Maior altura:", maior_altura)
-print("Menor altura:", menor_altura)
-print("Média da altura dos homens:", media_altura_homens)
-print("Quantidade de mulheres:", quantidade_mulheres)
+alturas=[]                           
+soma_Altura_H=0
+quant_mulheres=0
+for _ in range(15):
+    genero=input('Digite o gênero (M ou F): ')
+    altura=float(input('Digite sua altura: '))
+    
+    alturas.append(altura)
+    if genero=='M':
+        soma_Altura_H+=altura 
+    elif genero == 'F':
+        quant_mulheres+=1
+maior_altura=max(alturas)
+menor_altura=min(alturas)
+media_altura_H=soma_Altura_H/(5-quant_mulheres)
+print('Maior altura:' ,maior_altura)
+print('Menor altura:' ,menor_altura)
+print('Média altura dos homens:' ,media_altura_H)
+print('Quant mulheres: ' ,quant_mulheres)
