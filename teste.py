@@ -6,13 +6,13 @@ alturas=[]
 soma_Altura_H=0
 quant_mulheres=0
 for _ in range(15):
-    genero=input('Digite o gênero (M ou F): ')
+    genero=input('Digite o gênero (M ou F): ').lower()
     altura=float(input('Digite sua altura: '))
     
     alturas.append(altura)
-    if genero=='M':
+    if genero=='m':
         soma_Altura_H+=altura 
-    elif genero == 'F':
+    elif genero == 'f':
         quant_mulheres+=1
 maior_altura=max(alturas)
 menor_altura=min(alturas)
