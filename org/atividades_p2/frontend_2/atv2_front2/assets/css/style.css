@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #5e738b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-branco{
+    background-color: white;
+    width: 300px;
+    height: 450px;
+    display:flex;
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+
+}
+.box-branco-titulo{
+    font-family: 'Outfit';
+}
+
+form {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+form input{
+    outline: unset;
+    padding: 20px;
+    min-width: 200px;
+    border: 1px solid #d6e2f0;
+    border-radius: 20px;
+}
+
+form input:focus{
+    background-color: rgb(226, 235, 232);
+}
+
+form input[type=submit]{
+    background-color: #d6e2f0;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+form input[type=submit]:hover{
+    background-color: rgb(46, 49, 224);
+}
