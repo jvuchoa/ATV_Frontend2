@@ -1,7 +1,7 @@
 var mulheres = 0;
-var alturaMaxima = -400;
-var alturaMinima = 400;
-var somaAlturaHomens = 0;
+var altMax = -400;
+var altMin = 400;
+var s_AlturaHomens = 0;
 var countHomens = 0;
 var totalEntradas = 0;
 
@@ -17,20 +17,20 @@ formulario.addEventListener("submit", function (event) {
         if (generoSelecionado.value === "feminino") {
             mulheres++;
         } else if (generoSelecionado.value === "masculino") {
-            somaAlturaHomens += altura;
+            s_AlturaHomens += altura;
             countHomens++;
         }
 
-        alturaMaxima = Math.max(alturaMaxima, altura);
-        alturaMinima = Math.min(alturaMinima, altura);
+        altMax = Math.max(altMax, altura);
+        altMin = Math.min(altMin, altura);
 
         totalEntradas++; // Incrementa o contador de entradas
 
         if (totalEntradas === 15) {
-            var mediaAlturaHomens = somaAlturaHomens / countHomens;
+            var mediaAlturaHomens = s_AlturaHomens / countHomens;
             alert("Quantidade de mulheres: " + mulheres +
-                "\nAltura máxima: " + alturaMaxima +
-                "\nAltura mínima: " + alturaMinima +
+                "\nAltura máxima: " + altMax +
+                "\nAltura mínima: " + altMin +
                 "\nMédia de altura entre os homens: " + mediaAlturaHomens.toFixed(2) + " cm");
 
             formulario.reset();
