@@ -1,39 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-Br">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nivelamento em Java Script</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Calculadora de Altura Média</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="box-branco">
-
-        <h3 class="box-branco-titulo">Seus Dados</h3>
-
-        <form id="genalt">
-            <div>
-                <label>Escolha seu gênero:</label><br>
-                <input type="radio" id="masculino" name="genero" value="masculino">
-                <label for="masculino">Masculino</label><br>
-
-                <input type="radio" id="feminino" name="genero" value="feminino">
-                <label for="feminino">Feminino</label><br>
-            </div>
-            <div>
-                <label for="fname">Altura (Em CM):</label><br>
-                <input type="text" id="altura" name="altura" value=""><br>
-            </div>
-            <div>
-                <input type="submit" value="Enviar">
-            </div>
-        </form>
-
+    <div class="container">
+        <h1>Calculadora de Altura Média</h1>
+        <div id="input-form">
+            <button onclick="adicionarDado()">Adicionar Dado</button>
+            <button onclick="calcularResultados()">Calcular Resultados</button>
+        </div>
+        <div id="resultado">
+            <h2>Resultados:</h2>
+            <p>Quantidade de homens: <span id="quantidade-homens">0</span></p>
+            <p>Quantidade de mulheres: <span id="quantidade-mulheres">0</span></p>
+            <p>Altura média dos homens: <span id="altura-media-homens">0.00</span> cm</p>
+        </div>
     </div>
-
-    <script src="assets/js/script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
